@@ -1,0 +1,28 @@
+作用域链：
+	把所有的作用域看作是一个链条链接起来的，这样能使变量和函数能够有序的进行运行。
+
+
+回调函数：
+	当函数作为参数，传入另一个函数体内运行的时候，这个函数称为回调函数
+
+
+
+
+var box=document.getElementsByClassName("box")[0];
+	move();
+	setInterval(move,2500);
+	function move(){
+		animate(box,{width:300},2000,Tween.Linear,function (){
+			box.style.width="100px";
+		})
+	}
+	
+
+
+	
+	setInterval( function (){
+		animate(box,{width:200},2800,Tween.Linear,function () {
+		box.style.width="100px";
+		box.style.backgroundColor="blue";
+		})
+	},5000);

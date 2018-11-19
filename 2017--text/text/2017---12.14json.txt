@@ -1,0 +1,34 @@
+1.json的相关方法
+	PHP中json的转换
+	（1）PHP获取json文件
+		先把Content-type设置为application/json。
+		再使用file_get_contents();
+	
+
+	（2）把数据转换为json格式
+		$echo=array(1,2,3,4);
+		$echo=json_encode($echo);
+		json_encoding();
+	js中的json的转换
+	（1）前端获取json文件并转换
+		首先 获取使用xhr.responseText
+		然后进行转换 JSON.parse();
+	(2)前端数据转换为json文件
+		JSON.stringify(要转换的对象名).
+
+
+1.需求分析
+	确定不确定的数据源
+	1.确定发送请求的方式，post/get
+	2.确定URL地址
+	3.确定是否异步
+	4.确定请求主体内send方法传入的参数
+	Post方法下传null
+	5.请求成功后执行的函数
+	6.请求失败后执行的函数
+	7.请求响应完成后的执行的函数
+
+
+
+
+

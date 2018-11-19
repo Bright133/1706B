@@ -1,0 +1,163 @@
+			redis  相关命令
+
+	1.redis-server 启动服务端  （在尾部可以设置配置文件)
+	
+	2.redis-cli 进入客户端
+	
+	3.config set loglevel debug  设置日志级别为debug
+
+	4.config get loglevel  获取日志级别
+
+	5.config get  获取所有配置信息
+	
+	6.select 0-15   16个库  切换数据库
+	
+	7.ttl 查看key的剩余过期时间
+	
+	8.expire 设置过期时间
+
+	9.move()将指定的key移动到指定的数据库
+
+	10.type()查看key的数据类型
+	
+	11.rename()重命名key
+
+	12.persist()移除指定的key的过期时间
+
+	13.ping()查看链接是否存活
+	
+	14.echo （）输出
+	15.exit()退出当前服务
+
+	16.dbsize 查看当前数据库共有多少的key
+	17.flushdb 把当前库 删除
+	18.flushall 所有库的数据全部删除
+
+	
+	string 字符串
+
+	1.set key val 设置key对应的值为string类型的val
+	
+	2.get key  获取key对应val值
+
+	3.setnx 设置key值 检查当前key有没有设置过 
+	
+	4.setex 设置key的过期时间为n秒
+
+	5.mset 批量设置
+
+	6.msetnx	批量设置key值  检查当前key有没有设置过
+
+	7setrange  替换值内容
+
+	8mget 批量获取
+
+	9.getset  获取并设置
+
+	10.getrange 
+
+	11.strlen  获取字符串长度
+	
+	12.incr  递增(只对整形生效)+1
+
+	13.incrby () 增加 +n
+
+	14append
+
+	14 decr  decrby
+		
+	15 append
+
+			
+
+				hashes
+
+	1.hset 表名 字段名  val  设置hash表单个字段值
+
+	2.hget 获取hash表中单个字段值
+
+	3.hmset  批量设置hash表中多个字段值
+
+	4.hmget 获取hash表中多个字段值
+
+	5.hsetnx 设置hash表中单个字段并检查是否设置过    没有就设置成功
+
+	6.hincrby 在hash表中对某个int类型字段进行自定增加值
+
+	7.hexists 检查指定hash表中是否存在某个key值
+
+	8.hlen 返回hash表中所有字段的数量
+
+	9.hdel删除指定hash表中的某个字段
+
+	10.hkeys获取hash表中所有字段名
+
+	11.hvals获取hash表中所有val值
+
+	12.hgetall获取hash表中所有字段名以及val值
+
+	
+	lists（链表）
+
+	1.lpush 在链表头部压入元素
+
+	2.rpush在链表尾部
+
+	3.lrange 获取链表值  通过索引
+
+	4.linsert  在链表的特定位置前后 添加元素
+		before之前   after之后
+
+	5.lset 在指定链表中的指定下表重新赋值  
+
+	6.lpop    头部删除元素
+
+	7.rpop    尾部删除元素
+
+	8.ltrim  保留指定链表范围内的数据
+
+	9.lrem 在链表中删除指定个数与值相同的元素
+
+	10.rpoplpush在第一个链表的尾部删除元素，并在第二个链表头部添加（返回被移动的元素）
+
+	11.llen 返回链表对应的长度
+
+	12.lindex 返回链表中指定下标的值
+
+
+		sets(无序集合
+
+	1，sadd向set集合中添加元素 元素已存在不会重复添加	
+	2.spop 随机删除set集合中一个或多个 元素
+	3.srem 删除set集合中的指定元素
+	4.sdiff返回所集合中与第一个集合的差集
+	5.sdiffstore返回所集合中与第一个集合的差集并保存在另一个集合中
+	6.sinter 返回会集合中的交际
+	7.sinterstore 返回集合中的交际并保存在一个新的集合中
+	8.sunion 返回多个集合中的并集
+	9.sunionstore 返回多个集合中的并集 并保存在第一个新的集合中
+	10.smove从第一个集合中移动指定元素到第二个  集合中
+	11.scard返回集合中元素的个数
+	12.sismember返回集合中是否存在指定元素
+	13.srandmember 随机返回集合中一个或多个元素
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

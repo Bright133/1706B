@@ -1,0 +1,49 @@
+vue开发中遇到的问题
+	组件（父子、子父、非父子）之间传值问题：
+	父子：数据通过v-bind写在子组件的属性中
+	子父：子组件$emit触发传递数据事件 父组件v-on接收传递过来的数据
+	非父子：在minejs中写入bus.js 通过$emit $on传递数据
+
+	路由之间的传参问题：
+	$router.push({
+	   name:'xxx' (或者路由路径)，
+	   params：{}
+	})
+	$router.push({
+	   name:'xxx' (或者路由路径)，
+	   query：{}
+	})
+	id
+
+	解决跳入一个路由让其中一个子路由默认问题 ：使用redirect重定向
+	解决页面返回数据消失问题：keep-alive
+	解决实现vue路由拦截浏览器的需求的问题：
+	beforeRouteLeave (to, from, next) {
+　　           if(用户已经输入信息){
+           //出现弹窗提醒保存草稿，或者自动后台为其保存
+　　           }else{
+                 next(true);//用户离开
+　　           }
+           }
+	解决.路由变化页面数据不刷新问题：watch监测路由的变化
+		watch : {
+       		"$route" (to, from) {
+            		 if(to.path.indexOf('/home') > -1) {
+            
+                 		this.initData()
+           		 }
+       		 }     
+		
+	}
+	解决setInterval路由跳转继续运行并没有及时进行销毁：
+	beforeDestory()销毁
+	如果外层路由使用了keepalive需要使用路由钩子进行销毁 使用路由钩子时记得调用next（）
+
+	解决组件异步加载的问题
+	{
+     		path: '/home',
+      		name: 'Home',
+     		component: function(resolve){
+         		require(['@/views/home'], resolve)
+     		}
+	}

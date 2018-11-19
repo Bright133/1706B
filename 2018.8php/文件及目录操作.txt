@@ -1,0 +1,79 @@
+
+
+					文件及目录操作
+
+	1.move_uploaded_file(临时目录，指定目录)
+	将文件从临时目录移动到指定目录
+	
+	2.is_dir() 检测文件名是否是一个目录
+
+	3.mkdir(路径，0777，true) 创建新的目录
+		第三个参数为是否创建子级目录
+
+	4.basename() 获取路径中的文件名部分
+
+	5.dirname()获取路径中目录部分
+
+	6.filesize() 获取文件大小
+	
+	7.readfile() 输出文件
+
+	文件函数
+
+	1.fopen() 打开文件
+		
+	2.fwrite()向打开的文件写入数据  文件必须是打开状态
+	
+	3.fclose()关闭文件
+
+	4.file_get_contents()将url地址文件读取成一个字符串
+
+	5.file_put_contents（）将字符串写入文件
+
+	6.通篇读取文件
+		while(!feof($re)){
+				echo fread($re, 1);	
+		}
+	7.filesize()获取文件大小
+
+	8.file_exists() 返回文件是否存在
+	
+	9.is_file()检查是否是一个文件
+		
+	10.unlink()删除文件
+
+		GD2 常用函数
+
+	1.getimagesize()获取图片信息
+		返回数组 0：宽
+			1： 高
+			2：图片类型
+	2.imagecreatefromgif()
+	  imagecreatefromjpeg()
+	  imagecreatefrompng()
+	通过指定文件或url打开图片资源(新的图片
+
+	3.imagesx(resource)获取图像宽
+	  imagesy(resource)获取图像高
+
+	5.imagegif() iamgejpeg() imagepng()
+		输出图像到浏览器或指定文件路径
+
+	6. imagecopyresampled()压缩图片核心函数
+
+	7.imagecreatetruecolor()创建一个真彩画布
+
+
+
+
+
+
+
+BA6AF98B42
+
+
+
+
+
+
+

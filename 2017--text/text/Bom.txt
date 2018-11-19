@@ -1,0 +1,181 @@
+1.javaScript内置对象
+	Global全局对象
+	Object
+	String
+	Number
+	Boolean
+	...
+2.宿主对象
+	BOM
+	DOM
+BOM(browser object model 浏览器对象模型)B/S C/S
+BOM中的核心对象是window
+1.window是javascript的顶层对象
+2.window对象代表一个浏览器窗口或者一个框架
+3.window对象会在body或frameset每次出现时被自动创建
+
+window对象的属性：
+1.window.innerWidth;当前文档的宽度(FF中可以实现,IE不兼容）
+2.window.innerHeight;当前文档的高度(FF中可以实现,IE不兼容）
+3.window.outerWidth;当前浏览器的宽度
+4.window.outerHeigth;当前浏览器的高度
+5.window.name;浏览器的名字
+6.window.status;返回浏览器状态栏的文本
+7.window.screenLeft;当前浏览器相对屏幕左边的距离
+8.window.screenTop;当前浏览器相对屏幕上边的距离
+9.window.screenX;当前浏览器相对屏幕左边的距离（火狐）
+10.window.screenY;当前浏览器相对屏幕顶部的距离（火狐）
+11.document.documentElement.clientWidth;兼容的获取当前浏览器的宽度
+12.document.documentElement.clientHeight;兼容的获取当前浏览器的高度
+
+window对象的方法：
+1.window.alert();弹窗（警告框）
+2.window.confirm("AaA");带有“确定”和“取消”的对话框，
+得到的值为布尔值
+3.window.prompt(“请输入你的姓名：”,"");可输入信息的对话框
+4.window.setInterval(回调函数,时间);计时器,每隔一段时间一次回调函数，无限次数
+一直执行
+5.window.clearInterval();清除时间,保留当前对应的id值
+6.window.setTimeout(回调函数,时间）;延时执行回调函数，只执行一次
+7.window.clearTimeout();清除时间函数
+8.window.close();关闭窗口
+9.window.open(url,target,style);
+	url:链接地址
+	target：打开方式
+	style：新窗口的
+10.window.moveBy(x,y);相对于当前位置沿着X/Y轴移动到指定的像素
+可以为负数，即反向运动
+11.window.moveTo(x,y);相对于屏幕左上角位置沿着X/Y轴移动到指定的像素
+可以为负数，即反向运动
+12.window.resizeBy(x,y);相对窗口本身调整当前窗口大小
+13.window.resizeTo(x,y);调整当前窗口的大小
+14.window.history对象
+	属性：length;返回浏览器的历史列表中的url的数量
+	方法：back();返回当前页面的后一个url地址
+	      forward();
+	go(-1);后退一个页面
+	go(1);前进一个页面
+	go(0);刷新当前页面
+
+			DOM
+
+
+
+DOM   document object model
+
+document是DOM的核心对象
+DOM用来对html元素的样式,内容,属性进行动态的改变和操作
+
+document对象的属性：
+1.title;返回或设置当前文档的标题
+2.URL;返回当前文档的链接
+3.bgColor;设置当前文档的背景颜色
+4.fgColor;设置当前文档的字体颜色
+
+
+document对象的方法
+1.write();在文档中输入内容
+2.getElementById();返回拥有指定id的对象
+3.getElementsByTagName();返回拥有指定标签名的对象的集合
+4.getElementsByClassName();返回拥有指定类名的对象的集合
+5.getElementsByName();返回拥有指定名字的对象的集合
+
+
+
+document对象集合
+1.document.all;获取到当前文档中所有的标签;IE中会计算dtd声明标签,
+现代浏览器中不计算
+2.document.forms;
+获取当前文档中所有表单元素的集合
+	a)通过下标值来访问其中的某个表单
+	b)通过name形式访问
+3.document.anchors;
+获取到当前文档中所有锚链接对象的集合
+4.document.links;
+获取到当前文档中所有链接对象的集合(包括锚链接中的a标签)
+5.document.images;
+获取当前文档中的所有图像对象的集合
+
+对内容的操作：
+	1.innerHTML用来设置或获取对象起始标签到结束标签中的所有内容，
+	识别html标签
+	2.innerText用来设置或获取对象起始标签到结束标签中的文本内容(所有浏览器)
+	3.textContent用来设置或获取对象起始标签到结束标签中的文本内容
+
+ 节点
+    html文档中所有的节点组成一个文档树模型
+    html文档中每个元素,属性,文本等代表文档树的每一个节点,
+    这些节点相互联系,相互影响,构成一个完整的页面,我们称之为模型
+ 
+
+   	1.整个文档就是一个文档节点
+   	2.每个html页面中的标签是一个元素节点
+   	3.包在html元素中的文本是一个文本节点
+   	4.每一个Html属性是属性节点
+	5.注释称之为注释节点
+
+	节点的属性：
+	通过节点属性能够获取到每个节点之间的关系,并且可以通过
+	这种关系,准确快速的获取到相对应节点的对象.
+	1.对象 .parentNode;获取对象得到父节点元素
+	2.对象.childNode;获取对象的子节点的集合
+	3.对象.firtChild;获取对象的第一个子节点
+	4.对象.lastChild;获取对象的最后一个子节点
+	5.对象.nextSibling;获取下一个兄弟元素节点
+	6.对象.previousSibling获取上一个兄弟元素节点
+
+	2.通过节点属性,获取每个节点的详细信息(包括节点类型,节点名字,节点值)
+
+		节点类型		节点名字		节点值
+		nodeType(数值)		nodeName		nodeValue
+	元素节点 	1	 	 标签名		   	null
+	属性节点	2	  	属性名		   	属性值
+	文本节点	3	  	#text		  	  文本
+	注释节点	8	  	#comment	   	  注释文本
+	文档节点	9	  	#document	  	  null
+
+
+1.创建元素节点
+	var 变量名=document.createElement("标签名");
+2.创建属性节点
+	a. 对象.属性="属性值";
+	b. var attr=document.createAttribute("属性名");
+	   attr.nodeValue="属性值";
+	   对象.setAttributeNode(attr);
+	c.对象.setAttribute("属性名","属性值");
+3.创建文本对象
+	a. 对象.innerHTML="文本";
+	b. var  text=document.createTextNode("文本内容");
+	   对象.appendChild(text);
+4.追加到页面中
+	1.对象.appendChild(追加的对象); 插入到对象的最后
+	2.父对象.insertBefore(要插入的元素,之前的元素);
+	  插入到父对象中的某个子对象之前
+
+
+？ :
+
+
+
+1.父对象.removeChild(子对象);
+	在父对象中删除子对象,表面意义的删除
+	如果要彻底删除子对象
+	子对象=null;
+2.对象.replacechild(新节点,子节点)；
+	在父对象中用新节点替换原来的子节点
+3.复制节点
+	var newObj=obj.cloneNode(deep);
+	deep:true    深度克隆,
+	将当前节点的子节点全部克隆
+	    :false   只克隆当前的节点，不克隆子节点app
+
+
+
+
+
+
+
+
+
+
+

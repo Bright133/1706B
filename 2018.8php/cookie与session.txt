@@ -1,0 +1,28 @@
+				cookie与session
+
+1.cookie
+		cookie 是存储在浏览器，最大存储空间为4kb,由于在浏览器 所以cookie的安全性不高，
+	不建议存储关键数据
+		设置cookie
+			Setcookie（‘key’，‘val’，‘过期时间’，‘作用域’）
+		过期时间 接收时间戳  作用域  ‘/’/代表当前域名下的所有目录
+
+		使用cookie
+			直接利用预定义变量$_COOKIE['key'];
+	
+		销毁cookie
+		Setcookie（）设置cookie过期时间在前一秒Time（）-1
+
+
+
+2.session
+		session是存储在服务器端的数据，是通过cookie来完成存储的，如果用户没有开启cookie的话 是不可以使用session的，session存储服务器下，相对较为安全，但是不建议存储大量数据
+
+		设置session  需要开启session session_start();
+		以数组存储方式对seeion进行存储 $_SESSION['key']='val';
+		使用session
+		销毁session
+			可以将unset
+			 等于null；
+
+

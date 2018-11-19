@@ -1,0 +1,55 @@
+ajax是一门原生js的前后端交互技术，因此其代码要写成js脚本文件
+
+
+1.声明一个对象，这个对象是由XMLHTTPRequest构造函数实例化出来
+
+	这个对象也是一个js的内置对象
+	
+	Array date  Math  location  (bom)
+
+	ajax的XMLHTTPRequest也算是BOM的对象
+
+2.初始化对象
+	给xhr
+
+2.1 open方法初始化对象，并设置请求行
+请求命令行中的内容
+
+注意，在ajax代码
+	请求命令行中只需要写请求方法  和 URL地址
+
+2.2 设置请求头
+    //注意在get方法中，请求头省略
+2.3	设置请求主体的并发送Ajax的send方法，由于是get方法，
+	因此前端传递给后台的数据写在URL地址中，所以请求
+    	主体不需要设置，写null就可以了
+
+Post方法
+	1.实例化对象
+    	2.使用实例化对象设置请求行
+    	
+    	4.设置请求主体 发送请求
+在请求头中，post方法比get方法多了Content-length和Content-Type
+
+首先Content-length是计算机自动计算自动生成的，因此不需要设置
+	在post方法的请求头中只需要设置content-type就可以了
+
+	设置POST的请求行调用方法
+3.设置请求头
+	Xhr.setRequestHeader(
+		'Content-Type','application/x-www-form-urlencoded'	
+	);
+				    
+
+	xhr.send("键名=键值&键名=键值");s	
+
+
+
+
+
+
+
+
+
+
+

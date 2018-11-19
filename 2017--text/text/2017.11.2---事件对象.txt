@@ -1,0 +1,132 @@
+事件对象：
+	1.事件对象：记录一些事件发生时的相关信息的对象
+	2.只有当事件发生的时候才产生,只能在处理函数内部访问
+	3.处理函数执行完后自动销毁
+
+事件驱动：
+	1.事件：javascript侦测到用户的或者页面的一些行为
+	（事件怎么发生的）
+	2.事件源：引发事件的元素(发生在谁身上)
+	3.事件处理程序：对事件处理的程序或是函数(处理过程)
+
+
+事件分类：
+	1.鼠标事件
+		onclick 单击事件
+		ondblclick 双击事件
+		onmouseover 鼠标滑入事件
+		onmouseout  鼠标滑出事件
+		onmouseenter 鼠标移入事件
+		onmouseleave 鼠标移除事件
+	2.键盘事件
+		onkeydown	键盘按下事件
+		onkeyup		键盘抬起事件
+		onkeypress	键盘状态事件
+	3.表单事件
+		onfocus		表单获取焦点事件
+		onblur		表单失去焦点事件
+		onreset 	表单重置事件
+		onsubmit	表单提交事件
+	4.页面事件
+		window.onload	页面加载事件
+		window.onbeforeload  页面预加载事件
+
+如何绑定事件
+	1.脚本中绑定事件
+	2.元素绑定事件
+
+同一个事件绑定多个事件处理程序
+	1.FF 对象.addEventListener("事件类型",事件处理程序,
+	false);
+	2.FF 对象.removeEventListener("事件类型",事件处理
+	程序，false);
+
+	false:冒泡型事件
+	true:捕获型事件
+
+	
+IE	1.对象.attachEvent("on事件类型",事件处理程序);
+	2.对象.detachEvent("on事件类型",事件处理程序);
+
+冒泡事件：
+	由最明确事件对象一层一层的向上传递到最不明确的
+	事件对象（document）;
+
+捕获事件：
+	由最不明确的事件对象一层一层的向下传递到最明确
+	的事件对象
+
+
+IE中的事件对象为：window.event;
+	window.event.cancelBubble=true;阻止冒泡型事件
+
+FF中的事件对象为: function(e){}; e为事件对象
+	e.stopPropagation();阻止冒泡型事件
+
+事件流:当页面的元素触发事件的时候,该元素的容器及整个
+	页面都按照一定的顺序向应该元素触发的事件,事件传播的
+	顺序叫做事件流
+事件流：冒泡型事件   捕获型事件
+
+
+阻止冒泡事件：
+	IE中:widow.event.cancelBubble=true;
+
+	FF中:e.stopPropagation();
+
+阻止浏览器的默认行为：
+	FF中:e.preventDefault();
+
+	IE中:window.event.returnValue=false;
+
+
+获取目标事件源对象：
+	FF:e.target
+	IE:window.event.srcElement;
+
+
+事件委派:
+	本来由子元素
+	执行的事件,现在委派给父元素来替它完成此事件
+
+offsetLeft:  距离浏览器左边的距离
+offsetTop:   距离浏览器顶部的距离
+offsetWidth: 容器的实际宽度
+offsetHeight:容器的实际高度
+clientWidth: 容器(除边框外)的宽度
+clientHeight:容器(除边框外)的高度
+offsetX:     鼠标距离事件源对象左边的距离
+offsetY:     鼠标距离事件源对象顶部的距离
+
+
+FF:	
+offsetX;	鼠标事件源对象左边的距离
+offsetY;	鼠标事件源对象顶部的距离
+
+
+IE：
+layerX；	鼠标事件源对象左边的距离
+layerY;		鼠标事件源对象顶部的距离
+
+
+两种浏览器都兼容的获取鼠标对象的距离值
+clientX;	鼠标事件源对象左边的距离
+clienY;		鼠标事件源对象顶部的距离
+
+
+1.FF：除火狐外的浏览器	IE
+	mousewheel
+	ev.wheelDelta   属性值为+-120
+	+120滚轮向上滚动
+	-120滚轮向下滚动
+Firefox：
+	DOMMouseScroll
+	ev.detail	属性值为+-3
+	-3滚轮向上滚动	+3滚轮向下滚动
+
+scrollTop:
+	当前内容超出当前 文档 的距离	此值为正数
+
+
+
+

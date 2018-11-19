@@ -1,0 +1,38 @@
+1. 什么是微信小程序的组件  所有组件共有的属性有哪些
+
+
+2. 什么是        的 事件，   bind和catch事件绑定的区别
+
+3.什么是        的脚本语言 
+
+4.         目录结构及配置
+
+5.wx.require()封装成https方法  默认get请求
+
+
+
+1.组件是视图层的基本单元  组件自带一些功能与微信风格的样式
+
+2.事件是视图层到逻辑层的通讯方式
+	事件可以将用户的行为反馈到逻辑层进行处理
+	事件可以绑定在组件上   当达到触发事件，就会执行逻辑层中对应的事件处理函数
+
+3.wxs 是微信 script脚本的简称
+小程序包含一个描述整体程序的app和多个描述各自页面page
+小程序主体部分	由三个文件组成，必须放在项目的根目录
+	app.json  app.js  app.wxss
+	page js json wxss wxml
+5. axios(url,params,method==get){
+	return new Promise((resolve,reject)=>{
+	url:url,
+	data:params?params:{},
+	header:'content-type':'application/json',
+	success:function(res){
+		resolve(res);
+	}
+	error:function(err){
+		reject(err)
+	}
+}
+}
+ 

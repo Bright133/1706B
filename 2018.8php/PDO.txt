@@ -1,0 +1,26 @@
+		// 优势 1.减少客户端发送sql语句的数据
+	// 	2.大大减少了sql注入的风险
+
+
+
+	1.query 执行sql语句
+	2.prepcre  向数据库存储一条sql语句 返回stm对象
+
+
+
+	PDOStatement类
+
+	1.fetchAll()  返回结果集中所有行的数据
+
+	2.fetch() 返回结果集中一行数据
+	
+	3.execute() 执行一条 预处理的sql语句
+
+	4.beginTransaction()开启数据库事务
+
+	5.commit()提交事务
+
+	6.rollBack 回滚事务
+
+	7.setAttribute 设置属性
+	8.返回在添加数据是自动生成的id

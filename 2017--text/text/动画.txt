@@ -1,0 +1,74 @@
+animation: 名称 aa
+	animation-name
+	时间 s ms 
+	运动方式
+	linear
+	延时
+	animation-dealy
+	s ms
+	次数
+	n infinite
+transition:属性
+		
+	时间
+	
+	运动方式
+
+	延时
+transform：
+
+transform-style：perseve-3d；
+perspective：1000px；
+perspective-origin：center；
+
+transform：translate（X Y Z）(px)；平移
+	rotate（X Y Z）(deg)；旋转
+	scale（X Y Z）(px)；缩放
+	skew（X Y Z）（deg）；扭曲
+元素选择符
+	全局选择符（*）标签选择器（）id（#）类（.） 后代（空格） 交叉（.）
+	伪类（：hover）群组选择器（,）
+
+属性选择器：
+	E[attr] 具有attr属性的值
+	E[attr=“val”] 具有attr属性的值 并且属性值为val值的元素
+	E[attr~=“val”]具有attr属性的值 并且属性值一个为val值的
+	E[attr^=“val”]具有attr属性的值	并且属性值以val值开头的
+	E[attr$=“val”]具有attr属性的值	并且属性值以val值结尾的
+	E[attr*=“val”]具有attr属性的值 并且属性值包含val元素
+	E[attr|=“val”]具有attr属性的值	并且属性值具有“-”连接符，以val值开头的元素的元素
+伪类选择器：
+	：link 访问前的状态
+	：visited 点击时的状态
+	：hover 悬停时的状态
+	：active 访问后的状态
+	：focus 焦点 时的状态
+	：not（）除了被选中以外的所有元素
+	：only-child 选择父元素中仅仅含有一个子元素的元素
+.img-responsive:
+	max-width:100%;
+	height:auto;
+	display:block;
+display：flex；
+	1.flex将盒子容器变成一个可以伸缩的盒子，宽度不再固定不变；
+	2.它的子元素称为项目
+	3.X轴称为主轴
+justify-content：
+	检索或设置项目在主轴上的排列方式
+	1.space-between；将项目在容器中实现两端对齐
+	2.space-around：将项目在容器中平均分布，
+	第一个项目与最后一个项目距离父元素是其他项目之间距离的一半。
+	3.center：项目居中显示，没有间距，
+	4flex-start：第一个项目与父元素无间距，项目沿着主轴方向进行排列，无间距
+	5.flex-end，项目沿着主轴方向进行排列无间距，向右排列，最后一个项目与父元素无间距
+	
+flex-direction：
+	1.row默认主轴方向，向X轴从左向右
+	2.row-reverse；主轴反向，由X轴从右向左
+	3.column； 主轴由水平方向改为纵向 由上到下
+	4.column-reverse； 垂直主轴，由下到上
+
+flex-wrap：
+	1.nowrap 项目不会换行排列
+	2.warp   项目换行排列显示
+	3.warp-reverse 项目换行并反向排列
